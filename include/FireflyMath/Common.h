@@ -52,6 +52,12 @@ namespace FireflyMath
         return std::fmax(value1, value2);
     }
 
+    inline float lerp(float value1, float value2, float t)
+    {
+        t = min(max(t, 0.f), 1.f);
+        return (1.f - t) * value1 + t * value2;
+    }
+
     inline float sin(float value)
     {
         return std::sin(value);

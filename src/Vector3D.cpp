@@ -143,6 +143,7 @@ namespace FireflyMath
 
     Vector3D& Vector3D::lerp(const Vector3D& vector1, const Vector3D& vector2, float t)
     {
+        t = min(max(t, 0.f), 1.f);
         return (1.f - t) * vector1 + t * vector2;
     }
 
